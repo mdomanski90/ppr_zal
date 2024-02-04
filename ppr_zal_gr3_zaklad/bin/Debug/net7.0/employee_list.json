@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "fullName": "Jan Nowak",
+    "birthDate": "2002-03-04",
+    "occupation": "pracownik fizyczny",
+    "hourlyRate": 18.5,
+    "fullTimeSallary": 0
+  },
+  {
+    "id": 2,
+    "fullName": "Agnieszka Kowalska",
+    "birthDate": "1973-12-05",
+    "occupation": "urzędnik",
+    "hourlyRate": 0,
+    "fullTimeSallary": 2800
+  },
+  {
+    "id": 3,
+    "fullName": "Robert Lewandowski",
+    "birthDate": "1980-05-23",
+    "occupation": "pracownik fizyczny",
+    "hourlyRate": 29.0,
+    "fullTimeSallary": 0
+  },
+  {
+    "id": 4,
+    "fullName": "Zofia Plucińska",
+    "birthDate": "1998-11-02",
+    "occupation": "urzędnik",
+    "hourlyRate": 0,
+    "fullTimeSallary": 4750
+  },
+  {
+    "id": 5,
+    "fullName": "Grzegorz Braun",
+    "birthDate": "1960-01-29",
+    "occupation": "pracownik fizyczny",
+    "hourlyRate": 48.0,
+    "fullTimeSallary": 0
+  }
+]
