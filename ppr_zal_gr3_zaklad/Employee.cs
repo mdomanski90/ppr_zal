@@ -14,5 +14,6 @@ namespace ppr_zal_gr3_zaklad
         public string occupation { get; set; }
         public decimal hourlyRate { get; set; }
         public decimal fullTimeSallary { get; set; }
+        public int Age => DataInput.GetEmployeeAge(this);
     }
 }

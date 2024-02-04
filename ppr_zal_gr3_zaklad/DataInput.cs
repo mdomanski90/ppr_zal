@@ -16,5 +16,16 @@ namespace ppr_zal_gr3_zaklad
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             return JsonSerializer.Deserialize<List<Employee>>(data, options);
         }
+        public static Employee GetEmployeeById(int id)
+        {
+            var employees = GetEmployees();
+            return employees.FirstOrDefault(e => e.id == id);
+        }
+        public static int GetEmployeeAge(Employee employee)
+        {
+            var age = DateTime.Now.Year - employee.birthDate.Year;
+            return age;
+        }
     }
 }
+    

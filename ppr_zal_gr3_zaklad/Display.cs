@@ -47,16 +47,14 @@ namespace ppr_zal_gr3_zaklad
             Console.WriteLine("DANE PRACOWNIKA");
             Console.WriteLine("---------------------------------------------------");
 
-            var employees = DataInput.GetEmployees();
-            var employee = employees.FirstOrDefault(e => e.id == id);
+            var employee = DataInput.GetEmployeeById(id);
             if (employee != null)
             {
                 Console.WriteLine($"IMIE I NAZWISKO: {employee.fullName}");
 
-                var dOfB = employee.birthDate;
-                int age = DateTime.Now.Year - dOfB.Year;
+               
 
-                Console.WriteLine($"WIEK: {age}");
+                Console.WriteLine($"WIEK: {employee.Age}!!!!!!!!!!!!!!!!");
                 Console.WriteLine($"STANOWISKO: {employee.occupation}");
                 if (employee.hourlyRate > 0)
                 {
@@ -78,39 +76,33 @@ namespace ppr_zal_gr3_zaklad
             {
                 Console.Clear();
                 Console.WriteLine("PROSZĘ PODAĆ KWOTĘ PREMII DLA PRACOWNIKA:");
-                int bonus = Convert.ToInt32(Console.ReadLine());
-                if (employee.hourlyRate > 0)
-                {
-
-                    decimal SalaryW = employee.hourlyRate;
-                    if (days == 20)
-                    {
-                        SalaryW = employee.hourlyRate * days * 8m + bonus;
-                    }
-                    else SalaryW = employee.hourlyRate * days * 8m;
-
-                    var SalaryWr = Math.Round(SalaryW, 2);
-
-                    Console.WriteLine("Blabla WYNAGRODZENIE PRACOWNIKA BRUTTO: " + SalaryWr + " zł");
-                }
-                else
-                {
-                    decimal SalaryOf = employee.fullTimeSallary;
-                    if (days == 20)
-                    {
-                        SalaryOf = employee.fullTimeSallary + bonus;
-                    }
-                    else SalaryOf = employee.fullTimeSallary * 0.8m;
-                    var SalaryOfr = Math.Round(SalaryOf Of, 2)
-                    Console.WriteLine("WYNAGRODZENIE PRACOWNIKA BRUTTO: " + SalaryOfr + " zł");
-                }
+                decimal bonus = Convert.ToDecimal(Console.ReadLine());
+                Console.Clear();
+                Money.CalcSalary(employee, days, bonus);
             }
             else
             {
                 Console.WriteLine("Pracownik musiał przepracować minimum 1 dzień, i nie mógł przepracować więcej niż 20 dni");
             }
-            Console.WriteLine();
+        }
+        public static void DisplaySalary (Employee employee, decimal SalaryB, decimal SalaryN, decimal TaxAmount)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Pensja burtto: " + Math.Round(SalaryN, 2) + " zł"); //dlaczego SalaryN to SalaryB i odwrotnie. Dlaczego muszę wpisać netto za brutto, brutto za netto, zeby sie zgadzało.
+            if (Money.IsTaxable(employee.id))
+            {
+                Console.WriteLine("Kwota podatku: " + Math.Round(TaxAmount, 2) + " zł");
+                Console.WriteLine("Pensja do wypłaty: " + Math.Round(SalaryB, 2) + " zł");
+                Console.WriteLine();
+            }
 
+            else
+            {
+                Console.WriteLine("Pensja do wypłaty: " + Math.Round(SalaryN, 2) + " zł");
+                Console.WriteLine("Pensja nie podlega opodatkowaniu");
+                Console.WriteLine();
+            }
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
