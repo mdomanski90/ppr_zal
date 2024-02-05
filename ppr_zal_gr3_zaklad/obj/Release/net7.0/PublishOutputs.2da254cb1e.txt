@@ -1,0 +1,5 @@
+G:\My Drive\san\04l podstawy programowania\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.exe
+G:\My Drive\san\04l podstawy programowania\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.dll
+G:\My Drive\san\04l podstawy programowania\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.deps.json
+G:\My Drive\san\04l podstawy programowania\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.runtimeconfig.json
+G:\My Drive\san\04l podstawy programowania\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.pdb
