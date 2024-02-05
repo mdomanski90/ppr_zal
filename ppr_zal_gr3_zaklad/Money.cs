@@ -22,15 +22,17 @@ namespace ppr_zal_gr3_zaklad
         public static void CalcSalary(Employee employee, int days, decimal bonus)
         {
             decimal SalaryB;
-            
             if (employee.hourlyRate > 0)
             {
 
                 decimal SalaryBW = employee.hourlyRate;
+                
                 if (days == 20)
                 {
                     SalaryBW = employee.hourlyRate * days * 8m + bonus;
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("Przyznana premia: " + Math.Round(bonus, 2) + " zł");
+                    Console.ResetColor();
                 }
                 else SalaryBW = employee.hourlyRate * days * 8m;
                 SalaryB = SalaryBW;
@@ -41,7 +43,9 @@ namespace ppr_zal_gr3_zaklad
                 if (days == 20)
                 {
                     SalaryBOf = employee.fullTimeSallary + bonus;
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("Przyznana premia: " + Math.Round(bonus,2) + " zł");
+                    Console.ResetColor();
                 }
                 else SalaryBOf = employee.fullTimeSallary * 0.8m;
                 SalaryB = SalaryBOf;

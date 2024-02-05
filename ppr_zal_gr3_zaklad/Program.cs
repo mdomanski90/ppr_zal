@@ -20,6 +20,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
         {
             Console.WriteLine("KONIEC PROGRAMU");
             Console.WriteLine("wciśnij dowolny klawisz...");
+            Console.ReadKey();
             break;
         }
         

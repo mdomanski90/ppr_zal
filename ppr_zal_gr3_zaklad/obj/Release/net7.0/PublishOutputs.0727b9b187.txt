@@ -1,0 +1,5 @@
+C:\Users\Mateusz\Desktop\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.exe
+C:\Users\Mateusz\Desktop\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.dll
+C:\Users\Mateusz\Desktop\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.deps.json
+C:\Users\Mateusz\Desktop\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.runtimeconfig.json
+C:\Users\Mateusz\Desktop\ppr_zal\ppr_zal_gr3_zaklad\ppr_zal_gr3_zaklad.pdb

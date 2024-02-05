@@ -54,7 +54,7 @@ namespace ppr_zal_gr3_zaklad
 
                
 
-                Console.WriteLine($"WIEK: {employee.Age}!!!!!!!!!!!!!!!!");
+                Console.WriteLine($"WIEK: {employee.Age}");
                 Console.WriteLine($"STANOWISKO: {employee.occupation}");
                 if (employee.hourlyRate > 0)
                 {
@@ -102,7 +102,7 @@ namespace ppr_zal_gr3_zaklad
                 Console.WriteLine("Pensja nie podlega opodatkowaniu");
                 Console.WriteLine();
             }
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ResetColor();
         }
     }
 }
